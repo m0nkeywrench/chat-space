@@ -99,12 +99,12 @@
       padding: 0 20px;
     }
   }
-  &__message-list {
+  .message-list {
     background-color: #fafafa;
     height: calc(100vh - 190px);
     width: calc(100vw - 300px);
     padding-top: 35px;
-    &__message {
+    .message {
       margin-left: 40px;
       margin-bottom: 46px;
       &__info {
