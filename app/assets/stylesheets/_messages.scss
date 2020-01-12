@@ -71,6 +71,33 @@
     height: 99px;
     width: calc(100vw - 300px);
     border-bottom: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    &__left-content {
+      padding-top: 35px;
+      &__name {
+        color: #333333;
+        font-size: 20px;
+        padding-bottom: 15px;
+      }
+      &__member-list {
+        color: #999999;
+        font-size: 12px;
+      }
+    }
+    &__right-content {
+      text-decoration: none;
+      color: #38aef0;
+      height: 40px;
+      width: 72px;
+      font-size: 16px;
+      margin-top: 28px;
+      text-align: center;
+      line-height: 39px;
+      border: 1px solid #38aef0;
+      padding: 0 20px;
+    }
   }
   &__message-list {
     background-color: #fafafa;
