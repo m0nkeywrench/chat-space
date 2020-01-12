@@ -16,6 +16,7 @@
     width: 300px;
     display: flex;
     align-items: center;
+    position: fixed;
     &__box {
       height: 20px;
       width: 260px;
@@ -48,6 +49,7 @@
     background-color: #2f3e51;
     height: calc(100% - 100px);
     width: 300px;
+    margin-top: 100px;
     .group {
       padding: 20px 20px 40px;
       &__name {
@@ -74,6 +76,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0 40px;
+    position: fixed;
     &__left-content {
       padding-top: 35px;
       &__name {
@@ -103,6 +106,7 @@
     background-color: #fafafa;
     height: calc(100vh - 190px);
     width: calc(100vw - 300px);
+    margin-top: 100px;
     padding-top: 35px;
     .message {
       margin-left: 40px;
@@ -130,6 +134,8 @@
     background-color: #d2d2d2;
     height: 90px;
     width: calc(100vw - 300px);
+    position: fixed;
+    bottom: 0;
     .new-message {
       height: 90px;
       display: flex;
