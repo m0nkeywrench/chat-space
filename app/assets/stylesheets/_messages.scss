@@ -44,11 +44,11 @@
       }
     }
   }
-  &__group-list {
+  .group-list {
     background-color: #2f3e51;
     height: calc(100% - 100px);
     width: 300px;
-    &__group {
+    .group {
       padding: 20px 20px 40px;
       &__name {
         color:#ffffff;
