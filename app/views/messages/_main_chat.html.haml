@@ -1,0 +1,26 @@
+.main-chat
+  .group-info
+    .group-info__left-content
+      .group-info__left-content__name
+        group_name
+      .group-info__left-content__member-list
+        member:
+    = link_to "#", class: "group-info__right-content" do
+      Edit
+  .message-list
+    .message
+      .message__info
+        .message__info__name
+          name
+        .message__info__time
+          yyyy/mm/dd(a) hh:mm:ss
+      .message__text
+        hello 
+  .message-form
+    %form.new-message
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          = icon('far', 'image')
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", value: "Send", class: "submit-btn"}

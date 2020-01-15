@@ -1,0 +1,18 @@
+.side-bar
+  .side-header
+    .side-header__box
+      .side-header__box__user-name
+        hoge
+      %ul.side-header__box__menu
+        %li
+          = link_to "#", class: "side-header__box__menu__new-group" do
+            = icon('fas', 'edit')
+        %li
+          = link_to "#", class: "side-header__box__menu__edit-user" do
+            = icon('fas', 'cog')
+  .group-list
+    .group
+      .group__name
+        GROUP_name
+      .group__latest-message
+        latest-message
