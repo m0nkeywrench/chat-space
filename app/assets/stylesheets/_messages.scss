@@ -8,12 +8,12 @@
 }
 
 .side-bar {
-  width: 300px;
+  width: $side-barWidth;
   height: 100vh;
   .side-header {
     background-color: #253141;
-    height: 100px;
-    width: 300px;
+    height: $headerHeight;
+    width: $side-barWidth;
     display: flex;
     align-items: center;
     position: fixed;
@@ -27,7 +27,7 @@
         font-size: 16px;
         font-weight: bold;
         line-height: 20px;
-        color:#ffffff;
+        color: $side-barItemColor;
       }
       &__menu {
         width: 60px;
@@ -36,10 +36,10 @@
         line-height: 20px;
         align-items: flex-end;
         &__new-group {
-          color: #ffffff;
+          color: $side-barItemColor;
         }
         &__edit-user {
-          color:#ffffff;
+          color: $side-barItemColor;
           padding-left: 5px;
         }
       }
@@ -47,18 +47,17 @@
   }
   .group-list {
     background-color: #2f3e51;
-    height: calc(100% - 100px);
-    width: 300px;
-    margin-top: 100px;
+    height: calc(100% - #{$headerHeight});
+    width: $side-barWidth;
+    margin-top: $headerHeight;
     .group {
       padding: 20px 20px 40px;
+      color: $side-barItemColor;
       &__name {
-        color:#ffffff;
         font-size: 15px;
         padding-bottom: 5px;
       }
       &__latest-message {
-        color:#ffffff;
         font-size: 11px;
       }
     }
@@ -66,12 +65,12 @@
 }
 
 .main-chat {
-  width: calc(100vw - 300px);
+  width: calc(100vw - #{$side-barWidth});
   height: 100vh;
   .group-info {
     background-color: #ffffff;
-    height: 99px;
-    width: calc(100vw - 300px);
+    height: calc(#{$headerHeight} - 1px);
+    width: calc(100vw - #{$side-barWidth});
     border-bottom: 1px solid #eeeeee;
     display: flex;
     justify-content: space-between;
@@ -105,8 +104,8 @@
   .message-list {
     background-color: #fafafa;
     height: calc(100vh - 190px);
-    width: calc(100vw - 300px);
-    margin-top: 100px;
+    width: calc(100vw - #{$side-barWidth});
+    margin-top: $headerHeight;
     padding-top: 35px;
     .message {
       margin-left: 40px;
@@ -133,7 +132,7 @@
   .message-form {
     background-color: #d2d2d2;
     height: 90px;
-    width: calc(100vw - 300px);
+    width: calc(100vw - #{$side-barWidth});
     position: fixed;
     bottom: 0;
     .new-message {
