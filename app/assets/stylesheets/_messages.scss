@@ -52,13 +52,14 @@
     margin-top: $headerHeight;
     .group {
       padding: 20px 20px 40px;
-      color: $side-barItemColor;
       &__name {
         font-size: 15px;
         padding-bottom: 5px;
+        color: $side-barItemColor;
       }
       &__latest-message {
         font-size: 11px;
+        color: $side-barItemColor;
       }
     }
   }
