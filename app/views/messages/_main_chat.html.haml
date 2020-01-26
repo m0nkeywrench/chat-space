@@ -17,10 +17,21 @@
       .message__text
         hello 
   .message-form
-    %form.new-message
-      .input-box
-        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
-        %label{class: "input-box__image"}
-          = icon('far', 'image')
-          %input{type: "file", class: "input-box__image__file"}
-      %input{type: "submit", value: "Send", class: "submit-btn"}
+    = form_for @message, url: group_messages_path do |form| #模範解答では@groupも渡していたが、問題なく動いているように見える
+      .new-message
+        .input-box
+          = form.text_field :text, class: "input-box__text", placeholder: "type a message"
+          %label{class: "input-box__image"} 
+            = icon('far', 'image')
+            = form.file_field :image, class: "input-box__image__file"
+        = form.submit "Send", class: "submit-btn"
+
+-#    
+  %form.new-message
+  .input-box
+  %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+  %label{class: "input-box__image"}
+  = icon('far', 'image')
+  %input{type: "file", class: "input-box__image__file"}
+  %input{type: "submit", value: "Send", class: "submit-btn"}
+  ビューの崩れあり
