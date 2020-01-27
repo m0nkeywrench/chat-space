@@ -5,6 +5,7 @@
 .wrapper {
   height: 100vh;
   display: flex;
+  background-color: #fafafa; //メッセージ一覧箇所の背景色をここで指定
 }
 
 .side-bar {
@@ -50,6 +51,9 @@
     height: calc(100% - #{$headerHeight});
     width: $side-barWidth;
     margin-top: $headerHeight;
+    position: fixed;
+    left: 0;
+    bottom: 0;
     .group {
       padding: 20px 20px 40px;
       &__name {
@@ -104,10 +108,10 @@
   }
   .message-list {
     background-color: #fafafa;
-    height: calc(100vh - 190px);
     width: calc(100vw - #{$side-barWidth});
     margin-top: $headerHeight;
     padding-top: 35px;
+    padding-bottom: 90px;
     .message {
       margin-left: 40px;
       margin-bottom: 46px;
