@@ -17,11 +17,10 @@ class Group < ApplicationRecord
   end
 
   def get_members
-    members = ""
+    members = []
     users.each do |member|
-      members += member.nickname
-      members += " "
+      members << member.nickname
     end
-    return members
+    return members.join(", ")
   end
 end
