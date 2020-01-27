@@ -2,20 +2,13 @@
   .group-info
     .group-info__left-content
       .group-info__left-content__name
-        group_name
+        = @group.name
       .group-info__left-content__member-list
-        member:
+        = "member: #{@group.get_members}"
     = link_to "#", class: "group-info__right-content" do
       Edit
   .message-list
-    .message
-      .message__info
-        .message__info__name
-          name
-        .message__info__time
-          yyyy/mm/dd(a) hh:mm:ss
-      .message__text
-        hello 
+    = render @messages
   .message-form
     = form_for @message, url: group_messages_path do |form| #模範解答では@groupも渡していたが、問題なく動いているように見える
       .new-message
@@ -25,13 +18,3 @@
             = icon('far', 'image')
             = form.file_field :image, class: "input-box__image__file"
         = form.submit "Send", class: "submit-btn"
-
--#    
-  %form.new-message
-  .input-box
-  %input{type: "text", class: "input-box__text", placeholder: "type a message"}
-  %label{class: "input-box__image"}
-  = icon('far', 'image')
-  %input{type: "file", class: "input-box__image__file"}
-  %input{type: "submit", value: "Send", class: "submit-btn"}
-  ビューの崩れあり
