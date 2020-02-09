@@ -110,9 +110,10 @@
   .message-list {
     background-color: #fafafa;
     width: calc(100vw - #{$side-barWidth});
+    height: calc(100vh - (#{$headerHeight} - 1px) - 90px);
     margin-top: $headerHeight;
     padding-top: 35px;
-    padding-bottom: 90px;
+    padding-bottom: 46px;
     overflow: scroll;
     .message {
       margin-left: 40px;
