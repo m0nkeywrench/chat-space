@@ -38,8 +38,9 @@ $(function(){
     .done(function(data) {
       var html = buildHTML(data);
       $('.message-list').append(html);
+      $('.message-list').animate({ scrollTop: $('.message-list')[0].scrollHeight});
       $('form')[0].reset();
-      $('submit-btn').prop('disabled', false);
+      $('.submit-btn').prop('disabled', false);
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました")
