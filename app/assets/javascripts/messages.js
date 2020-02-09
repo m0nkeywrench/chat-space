@@ -42,7 +42,7 @@ $(function(){
       $('submit-btn').prop('disabled', false);
     })
     .fail(function() {
-      alert('')
+      alert("メッセージ送信に失敗しました")
     })
   })
 })
