@@ -54,6 +54,7 @@
     position: fixed;
     left: 0;
     bottom: 0;
+    overflow: scroll;
     .group {
       padding: 20px 20px 40px;
       &__name {
@@ -112,6 +113,7 @@
     margin-top: $headerHeight;
     padding-top: 35px;
     padding-bottom: 90px;
+    overflow: scroll;
     .message {
       margin-left: 40px;
       margin-bottom: 46px;
