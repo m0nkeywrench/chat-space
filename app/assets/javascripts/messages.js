@@ -44,7 +44,7 @@ $(function(){
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
-      $('.submit-btn').prop('disabled', false); //失敗後、送信ボタンが押せないのは不便なのでディセーブル解除
+      $('.submit-btn').prop('disabled', false);
     })
   })
 })
