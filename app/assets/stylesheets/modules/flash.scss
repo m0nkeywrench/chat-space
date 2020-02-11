@@ -3,11 +3,21 @@
     background-color: $light_blue;
     color: $white;
     text-align: center;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
   }
 
   .alert {
     background-color: $alert_orange;
     color: $white;
     text-align: center;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
   }
 }
