@@ -8,4 +8,4 @@
     - if message.text.present?
       = message.text
   .message__image
-    = image_tag message.image
+    = image_tag asset_path(message.image) #asset_path追加
